@@ -1,0 +1,32 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteRule ^(.*)$ public/$1 [L]
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+
+    Redirect 301 /poisk?degree_id=bakalavriat&direction_id=any&subdirection_id=any&city_id=any&page=1 https://studypage.net/poisk?degree_id=bakalavriat&direction_id=any&subdirection_id=any&specialty_id=any&city_id=any&pr1=any&pr2=any&un_id=any&type_id=any&page=1
+    Redirect 301 /poisk?degree_id=magistratura&direction_id=any&subdirection_id=any&city_id=any&page=1 https://studypage.net/poisk?degree_id=magistratura&direction_id=any&subdirection_id=any&specialty_id=any&city_id=any&pr1=any&pr2=any&un_id=any&type_id=any&page=1
+    Redirect 301 /poisk?degree_id=doktorantura&direction_id=any&subdirection_id=any&city_id=any&page=1 https://studypage.net/poisk?degree_id=doktorantura&direction_id=any&subdirection_id=any&specialty_id=any&city_id=any&pr1=any&pr2=any&un_id=any&type_id=any&page=1
+    Redirect 301 /poisk?degree_id=bakalavriat&direction_id=any&subdirection_id=any&city_id=almaty&page=1 https://studypage.net/poisk?degree_id=bakalavriat&direction_id=any&subdirection_id=any&specialty_id=any&city_id=almaty&pr1=any&pr2=any&un_id=any&type_id=any&page=1
+    Redirect 301 /poisk?degree_id=magistratura&direction_id=any&subdirection_id=any&city_id=almaty&page=1 https://studypage.net/poisk?degree_id=magistratura&direction_id=any&subdirection_id=any&specialty_id=any&city_id=almaty&pr1=any&pr2=any&un_id=any&type_id=any&page=1
+    Redirect 301 /poisk?degree_id=magistratura&direction_id=any&subdirection_id=any&specialty_id=any&city_id=almaty&pr1=any&pr2=any&un_id=any&type_id=any&page=1 https://studypage.net/poisk?degree_id=magistratura&direction_id=any&subdirection_id=any&specialty_id=any&city_id=almaty&pr1=any&pr2=any&un_id=any&type_id=any&page=1
+    Redirect 301 /poisk?degree_id=doktorantura&direction_id=any&subdirection_id=any&city_id=almaty&page=1 https://studypage.net/poisk?degree_id=doktorantura&direction_id=any&subdirection_id=any&specialty_id=any&city_id=almaty&pr1=any&pr2=any&un_id=any&type_id=any&page=1
+    Redirect 301 /poisk?degree_id=bakalavriat&direction_id=zdravoohranenie-i-socialnoe-obespechenie-medicina&subdirection_id=any&city_id=almaty&page=1 https://studypage.net/poisk?degree_id=bakalavriat&direction_id=zdravoohranenie-i-socialnoe-obespechenie-medicina&subdirection_id=zdravoohranenie&specialty_id=any&city_id=almaty&pr1=any&pr2=any&un_id=any&type_id=any&page=1
+    Redirect 301 /poisk?degree_id=bakalavriat&direction_id=injenernye-obrabatyvayushchie-i-stroitelnye-otrasli&subdirection_id=any&city_id=almaty&page=1 https://studypage.net/poisk?degree_id=bakalavriat&direction_id=injenernye-obrabatyvayushchie-i-stroitelnye-otrasli&subdirection_id=any&specialty=any&city_id=almaty&pr1=any&pr2=any&un_id=any&type_id=any&page=1
+    Redirect 301 /poisk?degree_id=bakalavriat&direction_id=pedagogicheskie-nauki&subdirection_id=any&city_id=almaty&page=1 https://studypage.net/poisk?degree_id=bakalavriat&direction_id=pedagogicheskie-nauki&subdirection_id=pedagogika-i-psihologiya&specialty_id=pedagogika-i-psihologiya&city_id=almaty&pr1=any&pr2=any&un_id=any&type_id=any&page=1
+    Redirect 301 /poisk?degree_id=bakalavriat&direction_id=iskusstvo-i-gumanitarnye-nauki&subdirection_id=any&city_id=almaty&page=1 https://studypage.net/poisk?degree_id=bakalavriat&direction_id=iskusstvo-i-gumanitarnye-nauki&subdirection_id=gumanitarnye-nauki&specialty_id=any&city_id=almaty&pr1=any&pr2=any&un_id=any&type_id=any&page=1
+    Redirect 301 /poisk?degree_id=bakalavriat&direction_id=socialnye-nauki-jurnalistika-i-informaciya&subdirection_id=any&city_id=almaty&page=1 https://studypage.net/poisk?degree_id=bakalavriat&direction_id=socialnye-nauki-jurnalistika-i-informaciya&subdirection_id=jurnalistika-i-informaciya&specialty_id=any&city_id=almaty&pr1=any&pr2=any&un_id=any&type_id=any&page=1
+    Redirect 301 /poisk?degree_id=bakalavriat&direction_id=biznes-upravlenie-i-pravo&subdirection_id=any&city_id=almaty&page=1 https://studypage.net/poisk?degree_id=bakalavriat&direction_id=biznes-upravlenie-i-pravo&subdirection_id=biznes-i-upravlenie&specialty_id=any&city_id=almaty&pr1=any&pr2=any&un_id=any&type_id=any&page=1
+    Redirect 301 /poisk?degree_id=bakalavriat&direction_id=estestvennye-nauki-matematika-i-statistika&subdirection_id=any&city_id=almaty&page=1 https://studypage.net/poisk?degree_id=bakalavriat&direction_id=estestvennye-nauki-matematika-i-statistika&subdirection_id=matematika-i-statistika&specialty_id=matematika&city_id=almaty&pr1=any&pr2=any&un_id=any&type_id=any&page=1
+    Redirect 301 /poisk?degree_id=bakalavriat&direction_id=informacionno-kommunikacionnye-tehnologii&subdirection_id=any&city_id=almaty&page=1 https://studypage.net/poisk?degree_id=bakalavriat&direction_id=informacionno-kommunikacionnye-tehnologii&subdirection_id=informacionno-kommunikacionnye-tehnologii&specialty_id=informatika&city_id=almaty&pr1=any&pr2=any&un_id=any&type_id=any&page=1
+    Redirect 301 /poisk?degree_id=bakalavriat&direction_id=uslugi&subdirection_id=sfera-obslujivaniya&city_id=almaty&pr1=any&pr2=any&page=1 https://studypage.net/poisk?degree_id=bakalavriat&direction_id=uslugi&subdirection_id=sfera-obslujivaniya&specialty_id=turizm&city_id=almaty&pr1=any&pr2=any&un_id=any&type_id=any&page=1
+    Redirect 301 /poisk?degree_id=bakalavriat&direction_id=injenernye-obrabatyvayushchie-i-stroitelnye-otrasli&subdirection_id=any&specialty=any&city_id=almaty&pr1=any&pr2=any&un_id=any&type_id=any&page=1 https://studypage.net/poisk?degree_id=bakalavriat&direction_id=injenernye-obrabatyvayushchie-i-stroitelnye-otrasli&subdirection_id=any&specialty_id=any&city_id=almaty&pr1=any&pr2=any&un_id=any&type_id=any&page=1
+    Redirect 301 /poisk?degree_id=bakalavriat&direction_id=any&subdirection_id=any&city_id=almaty&pr1=6&pr2=any&page=1 https://studypage.net/poisk?degree_id=bakalavriat&direction_id=any&subdirection_id=any&specialty_id=any&city_id=almaty&pr1=6&pr2=any&un_id=any&type_id=any&page=1
+    Redirect 301 /poisk?degree_id=bakalavriat&direction_id=any&subdirection_id=any&city_id=any&pr1=6&pr2=any&page=1 https://studypage.net/poisk?degree_id=bakalavriat&direction_id=any&subdirection_id=any&specialty_id=any&city_id=any&pr1=6&pr2=any&un_id=any&type_id=any&page=1
+
+
+
+    #RewriteRule ^/poisk/bakalavriat$  /poisk?degree_url=bakalavriat [NC,L]
+    #RewriteRule ^/poisk/bakalavriat$  /poisk?degree_url=bakalavriat [NC,L]
+</IfModule>

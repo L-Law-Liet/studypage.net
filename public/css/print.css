@@ -1,0 +1,91 @@
+@media print {
+
+body {
+    background:#fff none!important;
+}
+
+.html-module iframe,
+iframe,
+.ten,
+.bx-wrapper,
+.col-lg-4 .teaser,
+.navbar,
+.breadcrumb-wrapper,
+.subnav,
+.faq-teaser,
+#footer,
+.sprites,
+.sr-only,
+.jump,
+.study-teaser,
+.pagination,
+form,
+.googlemaps,
+#filters {
+    display:none!important;
+}
+
+.wh-list-ul li {
+    background: none;
+    border-bottom:1px dotted #000;
+    margin-bottom:10px;
+}
+
+#start .navbar + .container {
+    min-height: auto!important;
+    height: auto!important;
+}
+
+a[href]:after {
+    content: "";
+}
+abbr[title]:after {
+    content: "";
+}
+
+#start .col-lg-4 .teaser,
+#overview .col-lg-4 .teaser,
+#footer + .container,
+.collapse {
+    display: block!important;
+}
+
+ol {
+    padding:0 0 20px 0!important;
+    margin:0 0 0 20px!important;
+}
+
+ul {
+    list-style: circle outside!important;
+    padding:0 0 20px 0!important;
+    margin:0 0 0 15px!important;
+}
+
+ul,
+ul li {
+    list-style: circle outside!important;
+}
+
+ol li,
+ul li,
+ol li a,
+ul li a {
+    text-indent:0!important;
+}
+
+.panel-title > a {
+    padding-left: 0;
+    text-indent: 0;
+    font-weight: bold;
+}
+
+.isotope,
+.cities .element-item {
+    position: relative!important;
+    width: auto!important;
+    height: auto!important;
+    left: auto!important;
+    top: auto!important;
+}
+
+}
