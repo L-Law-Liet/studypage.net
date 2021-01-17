@@ -303,6 +303,15 @@ Route::group([
         Route::get('/view/{id}', 'ArticleController@getView');
         Route::get('/delete/{id}', 'ArticleController@getDelete');
     });
+    Route::prefix('slider')->group(function () {
+        Route::get('/', 'SliderController@index');
+        Route::get('/add', 'SliderController@getAdd');
+        Route::get('/add/{id}', 'SliderController@getAdd');
+        Route::post('/add', 'SliderController@postAdd');
+        Route::post('/add/{id}', 'SliderController@postAdd');
+        Route::get('/view/{id}', 'SliderController@getView');
+        Route::get('/delete/{id}', 'SliderController@getDelete');
+    });
     Route::prefix('proposal')->group(function () {
         Route::get('/', 'ProposalController@index');
         Route::get('/view/{id}', 'ProposalController@getView');

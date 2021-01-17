@@ -346,6 +346,10 @@ return [
                     'url'         => 'admin/article',
                 ],
                 [
+                    'text'        => 'Слайдер',
+                    'url'         => 'admin/slider',
+                ],
+                [
                     'text'        => 'Социальные сети и дополнительные настройки',
                     'url'         => 'admin/social',
                 ],

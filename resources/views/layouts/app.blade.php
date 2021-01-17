@@ -87,21 +87,6 @@
                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                         <ul class="social-icons float-right">
                              <div class="d-flex justify-content-between">
-                                 <li class="mr-3 font-weight-bold">
-                                     <a target="_blank" href="{{\App\Models\Social::find(2)->link}}">
-                                         Instagram
-                                     </a>
-                                 </li>
-                                 <li class="mr-3 font-weight-bold">
-                                     <a target="_blank" href="{{\App\Models\Social::find(3)->link}}">
-                                         Youtube
-                                     </a>
-                                 </li>
-                                 <li class="font-weight-bold">
-                                     <a target="_blank" href="{{\App\Models\Social::find(5)->link}}">
-                                         Facebook
-                                     </a>
-                                 </li>
                                  @if(Auth::check())
                                      <li class="log-cab ml-4 d-inline-block">
 {{--                                                <div class="d-inline mr-3">--}}
@@ -296,6 +281,19 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="">
+                        <div id="hover-red-div" class="d-flex justify-content-around mb-3">
+                            <a target="_blank" class="text-white" href="{{\App\Models\Social::find(2)->link}}">
+                                Instagram
+                            </a>
+                            <a target="_blank" class="text-white" href="{{\App\Models\Social::find(3)->link}}">
+                                Youtube
+                            </a>
+                            <a target="_blank" class="text-white" href="{{\App\Models\Social::find(5)->link}}">
+                                Facebook
+                            </a>
+                        </div>
+                    </div>
                     <h2 class="sr-only">main navigation</h2>
                     <ul>
                         <li>
@@ -370,19 +368,7 @@
                 </div>
             </div>
         </div>
-        <div class="mobile-socials">
-            <div class="d-flex justify-content-around mb-3">
-                <a target="_blank" class="text-white" href="{{\App\Models\Social::find(2)->link}}">
-                    Instagram
-                </a>
-                <a target="_blank" class="text-white" href="{{\App\Models\Social::find(3)->link}}">
-                    Youtube
-                </a>
-                <a target="_blank" class="text-white" href="{{\App\Models\Social::find(5)->link}}">
-                    Facebook
-                </a>
-            </div>
-        </div>
+
         <div class="container">
             <? $year = Social::findOrFail(7); ?>
             <p class="text-center m-t-35">&copy; <?=$year->link?> | Все права защищены</p>

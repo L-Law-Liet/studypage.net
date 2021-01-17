@@ -230,6 +230,10 @@ body:not(.microsite) .navbar-default .navbar-nav>li, body:not(.microsite) .navba
 .chosen-container-single .chosen-single div b {
     background: url(chosen-sprite.png) no-repeat 0 8px!important;
 }
+#hover-red-div a:hover{
+    color: #c11800 !important;
+    text-decoration: none;
+}
 .main-row-inner {
     margin: 50px;
     position: relative;
@@ -766,6 +770,82 @@ h1, .h1, h2, .h2, h3, .h3, .wohnheimfinder legend, .btn-primary, .nav-tabs>li>a,
     border: 0;
     cursor: default;
 }
+.bx-pager-link {
+    background: #ccc !important;
+}
+.bx-pager-link.active {
+    background: #c11800 !important;
+}
+.bx-wrapper {
+    max-height: 340px !important;
+}
+.bx-viewport {
+    height: 349px !important;
+    box-shadow: 0 10px 20px 0 #7A7A7A !important;
+}
+.slider-media-container {
+    width: 620px;
+    height: 349px;
+    position: relative;
+}
+.slider-text {
+    width: 340px;
+    background: url('../img/s_minimap.jpg') repeat center top;
+    background-size: cover;
+    color: whitesmoke;
+    padding: 2rem;
+}
+@media (max-width: 769px) {
+    .bx-viewport {
+        height: 470px !important;
+    }
+    .bx-next, .bx-prev {
+        zoom: 1.4 !important;
+        top: 70% !important;
+    }
+    .bx-next {
+        right: -12px !important;
+        background: url("../img/chevron-right.svg") no-repeat !important;
+        transform: rotate(0) !important;
+    }
+    .bx-prev {
+        left: 0 !important;
+        background: url("../img/chevron-left.svg") no-repeat !important;
+    }
+    .bx-next:hover:before, .bx-next:focus:before, .bx-prev:hover:before, .bx-prev:focus:before {
+        opacity: 1 !important;
+    }
+    .slider-text {
+        height: 290px;
+        width: 100%;
+    }
+    .bx-wrapper {
+        max-height: 620px !important;
+    }
+    .slider-media-container {
+        width: 100%;
+        height: 180px;
+    }
+}
+
+.bx-controls{
+    display: flex !important;
+    justify-content: center !important;
+}
+.bx-pager {
+    background: url(../img/dotsvertical.png) repeat-y 0 1px !important;
+    display: flex;
+    justify-content: center;
+    width: auto !important;
+    position: relative !important;
+}
+.bx-controls-auto {
+    right: auto !important;
+    position: relative !important;
+    padding: 0 !important;
+    margin-top: -30px !important;
+}
+
 .sgs-detail .nav>li>a:hover, .nav>li>a:focus {
     text-decoration: none;
 }
@@ -1255,6 +1335,9 @@ ul.social-icons li a:not(#login):not(#register):not(#logged):not(#cabinetDropdow
     margin-right: 20px;
     color: black;
     display: block;
+}
+.bx-wrapper{
+    border: 0 !important;
 }
 .dd-item:hover {
     color: #2D7ABF;
