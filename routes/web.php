@@ -104,7 +104,7 @@ Route::group([
         Route::get('/delete/{id}', 'TypesController@getDelete');
     });
     Route::prefix('subject')->group(function () {
-        Route::get('/{t}', 'SubjectController@index');
+        Route::get('/{t}', 'SubjectController@index')->name('admin.subject');
         Route::get('/{t}/add', 'SubjectController@getAdd');
         Route::get('/{t}/add/{id}', 'SubjectController@getAdd');
         Route::post('/{t}/add', 'SubjectController@postAdd');
@@ -412,8 +412,8 @@ Route::prefix('/navigator/rating')->group(function(){
 Route::get('navigator/faq/1', 'PagesController@showFAQ');
 Route::get('navigator/faq/{id}', 'PagesController@showFAQ');
 Route::get('navigator/list/partner', 'PagesController@partnerList');
-Route::get('/navigator/list/vuz', 'PagesController@univerList');
-Route::get('/navigator/list/college', 'PagesController@collegeList');
+Route::get('/navigator/list/vuz', 'PagesController@univerList')->name('list.vuz');
+Route::get('/navigator/list/college', 'PagesController@collegeList')->name('list.college');
 Route::prefix('navigator/list/{name}')->group(function (){
     Route::get('/view/{id}/{nav?}', 'PagesController@attributesCollegeFromList')->name('college.view');
 });

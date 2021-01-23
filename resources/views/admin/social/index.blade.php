@@ -31,7 +31,8 @@
                                 <td>{{ $directions->firstItem()+$k }}</td>
                                 <td>{{ \Carbon\Carbon::parse($v->created_at)->format('d.m.Y') }}</td>
                                 <td>{{ $v->name }}</td>
-                                <td>{{ $v->link }}</td>
+                                <td>@if($v->id > 10 && $v->id < 16)
+                                        <img width="100" height="100" src="{{ asset('/img/social/'.$v->link) }}" alt=""> @else {{ $v->link }} @endif</td>
                                 <td style="text-align:center;">
                                     <a href="/admin/social/add/{{ $v->id }}">
                                         <i class="glyphicon glyphicon-pencil" title="Редактировать"></i>

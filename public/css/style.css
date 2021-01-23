@@ -558,6 +558,13 @@ a {
 a:hover, a.active{
     color: #c11800;
 }
+.college-list-a:hover {
+    font-size: 1.05rem;
+    color: #c11800;
+}
+.passive-list-a:hover {
+    font-size: 1rem !important;
+}
 .facebook-teaser-rebrush p.fb-title {
     margin-bottom: 25px;
     word-break: break-word;
@@ -770,20 +777,20 @@ h1, .h1, h2, .h2, h3, .h3, .wohnheimfinder legend, .btn-primary, .nav-tabs>li>a,
     border: 0;
     cursor: default;
 }
-.bx-pager-link {
+.slider-container-div .bx-pager-link {
     background: #ccc !important;
 }
-.bx-pager-link.active {
+.slider-container-div .bx-pager-link.active {
     background: #c11800 !important;
 }
-.bx-wrapper {
+.slider-container-div .bx-wrapper {
     max-height: 340px !important;
 }
-.bx-viewport {
+.slider-container-div .bx-viewport {
     height: 349px !important;
     box-shadow: 0 10px 20px 0 #7A7A7A !important;
 }
-.slider-media-container {
+.slider-container-div .slider-media-container {
     width: 620px;
     height: 349px;
     position: relative;
@@ -795,8 +802,89 @@ h1, .h1, h2, .h2, h3, .h3, .wohnheimfinder legend, .btn-primary, .nav-tabs>li>a,
     color: whitesmoke;
     padding: 2rem;
 }
+.find-form {
+    width: 30%;
+    background: url('../img/s_minimap.jpg') repeat center top;
+    background-size: cover;
+}
+.edu-service-blocks {
+    width: 68%;
+}
+.slider-lists-div {
+    display: none;
+}
+.slider-lists-div .bx-prev,
+.slider-lists-div .bx-next {
+    top: 52.5% !important;
+}
+.mobile-ent-faq {
+    display: none;
+}
+.start-socials {
+    overflow: hidden;
+    width: 100%;
+    margin-top: 40px;
+}
+.start-socials .instagram {
+    background-image: url('../img/insta.svg');
+}
+.start-socials .facebook {
+    background-image: url('../img/fb.svg');
+}
+.start-socials .youtube {
+    background-image: url('../img/yt.svg');
+}
+.start-socials .instagram:hover {
+    background-image: url('../img/insta-hover.svg') !important;
+}
+.start-socials .facebook:hover {
+    background-image: url('../img/fb-hover.svg') !important;
+}
+.start-socials .youtube:hover {
+    background-image: url('../img/yt-hover.svg') !important;
+}
+.start-socials .sprites {
+    display: block;
+    width: 62px;
+    height: 62px;
+    background-position: 0;
+}
+.start-socials ul {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    width: 236px;
+    overflow: hidden;
+}
+.start-socials li:first-child {
+    margin-left: 0;
+}
+.start-socials li {
+    float: left;
+    margin-left: 25px;
+}
+.sprites.instagram {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 48px;
+}
 @media (max-width: 769px) {
-    .bx-viewport {
+    .m-ent-calc {
+        padding: 80.5px 30px;
+    }
+    .mobile-ent-faq {
+        display: block;
+    }
+    .slider-lists-div {
+        display: block;
+    }
+    .find-form {
+        width: 100%;
+    }
+    .edu-service-blocks {
+        display: none;
+    }
+    .slider-container-div .bx-viewport {
         height: 470px !important;
     }
     .bx-next, .bx-prev {
@@ -812,34 +900,49 @@ h1, .h1, h2, .h2, h3, .h3, .wohnheimfinder legend, .btn-primary, .nav-tabs>li>a,
         left: 0 !important;
         background: url("../img/chevron-left.svg") no-repeat !important;
     }
-    .bx-next:hover:before, .bx-next:focus:before, .bx-prev:hover:before, .bx-prev:focus:before {
+    .bx-next:hover:before, .bx-next:focus:before,
+    .bx-prev:hover:before, .bx-prev:focus:before {
         opacity: 1 !important;
     }
     .slider-text {
         height: 290px;
         width: 100%;
     }
-    .bx-wrapper {
+    .slider-container-div .bx-wrapper {
         max-height: 620px !important;
     }
-    .slider-media-container {
+    .slider-container-div .slider-media-container {
         width: 100%;
-        height: 180px;
+        height: 188.5px;
+    }
+}
+@media (max-width: 850px) {
+    .city-teaser ul {
+        max-width: 100% !important;
+    }
+    .row.partners button.slick-prev{
+        left: 15px;
+    }
+    .row.partners button.slick-next {
+        right: 15px;
+    }
+    .row.partners .slick-slider {
+        width: 100%;
     }
 }
 
-.bx-controls{
+.slider-container-div .bx-controls{
     display: flex !important;
     justify-content: center !important;
 }
-.bx-pager {
+.slider-container-div .bx-pager {
     background: url(../img/dotsvertical.png) repeat-y 0 1px !important;
     display: flex;
     justify-content: center;
     width: auto !important;
     position: relative !important;
 }
-.bx-controls-auto {
+.slider-container-div .bx-controls-auto {
     right: auto !important;
     position: relative !important;
     padding: 0 !important;
@@ -1945,9 +2048,6 @@ ul.social-icons li a{
     .searchG {
         display:flex!important;
     }
-    .oG {
-        display:none!important;
-    }
     .main-row-inner button {
         float:none!important;
     }
@@ -2273,6 +2373,13 @@ table>thead>tr>th, table>tbody>tr>th, table>tfoot>tr>th, table>thead>tr>td, tabl
 }
 #sortorder_chosen div.chosen-drop ul.chosen-results li:first-child {
     display: none !important;
+}
+#sortReg ~ div a {
+    height: 32px !important;
+    font-size: 13px !important;
+}
+#sortReg ~ div a div b {
+    background-position: 0 5px !important;
 }
 .cv-media {
     font-style: normal;
@@ -2764,6 +2871,13 @@ table:not(#ent-table) {
     }
     .partners button.slick-next:before {
         right: 1px;
+    }
+
+    .row.partners button.slick-prev{
+        left: 0;
+    }
+    .row.partners button.slick-next {
+        right: 0;
     }
 }
 input[type="date"] {

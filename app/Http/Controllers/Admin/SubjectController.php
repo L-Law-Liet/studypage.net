@@ -10,18 +10,30 @@ namespace App\Http\Controllers\Admin;
 
 
 use App\Models\Subject;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 
 class SubjectController
 {
-    public function index($t){
+    public function index($t, Request $request){
+        if ($request->get('page')){
+            $n = session()->get('n');
+        }
+        else {
+            $n = $request->get('n');
+        }
+        session(['n' => $n]);
 
         $data = [];
         $forCollege = 1;
         if ($t == 'univer'){
             $forCollege = 0;
         }
-        $subjects = Subject::where('forCollege', $forCollege)->orderBy('id', 'desc');
+        $subjects = Subject::where('forCollege', $forCollege);
+        if ($n){
+            $subjects = $subjects->where('name_ru', 'LIKE', '%'.$n.'%');
+        }
+        $subjects->orderBy('id', 'desc');
         $data['subjects'] = $subjects->paginate(20);
         $data['count'] = $data['subjects']->total();
         if (isset($_GET['page'])) {
@@ -29,7 +41,7 @@ class SubjectController
         } else {
             setcookie("page", null);
         }
-        return view('admin.subject.index', compact('t'), $data);
+        return view('admin.subject.index', compact('t', 'n'), $data);
     }
 
     public function getAdd($t, $id = null){

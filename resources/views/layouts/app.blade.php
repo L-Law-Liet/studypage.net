@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
-
+    <meta name="google-site-verification" content="JiIrucxZ_fm0sLImvrqc_fpyVBjZG_H0JZPZSjMn91g" />
+    <meta name="yandex-verification" content="e91072da6c62023f" />
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <?
@@ -281,19 +282,6 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <div class="">
-                        <div id="hover-red-div" class="d-flex justify-content-around mb-3">
-                            <a target="_blank" class="text-white" href="{{\App\Models\Social::find(2)->link}}">
-                                Instagram
-                            </a>
-                            <a target="_blank" class="text-white" href="{{\App\Models\Social::find(3)->link}}">
-                                Youtube
-                            </a>
-                            <a target="_blank" class="text-white" href="{{\App\Models\Social::find(5)->link}}">
-                                Facebook
-                            </a>
-                        </div>
-                    </div>
                     <h2 class="sr-only">main navigation</h2>
                     <ul>
                         <li>

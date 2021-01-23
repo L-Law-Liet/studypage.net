@@ -342,13 +342,34 @@ public static function mainFilter($degree, $direction_id, $city_id, $query){
         return view('faq.select-prof', compact('faq', 'navActive'))->with('map', 'Главная , Навигатор , '.$faq->question);
     }
 
-    public function collegeList(){
-        $universities = University::where('hasCollege', 1)->get();
-        return view('college-list')->with('universities', $universities)->with('map', 'Главная , Навигатор , Список колледжей')->with('navActive', 1);
+    public function collegeList(Request $request){
+        $r = null;
+//        dd($request->all());
+        $universities = University::where('hasCollege', 1);
+        $region_ids = University::where('hasCollege', 1)->groupBy('region_id')->pluck('region_id');
+        if($request->region){
+            $universities = $universities->where('region_id', $request->region)->get();
+            $r = $request->region;
+        }
+        else{
+            $universities = $universities->get();
+        }
+        $regions = Region::whereIn('id', $region_ids)->get();
+        return view('college-list', compact('regions', 'r'))->with('universities', $universities)->with('map', 'Главная , Навигатор , Список колледжей')->with('navActive', 1);
     }
-    public function univerList(){
-        $universities = University::where('hasCollege', 0)->get();
-        return view('college-list')->with('universities', $universities)->with('map', 'Главная , Навигатор , Список ВУЗов')->with('navActive', 1);
+    public function univerList(Request $request){
+        $r = null;
+        $universities = University::where('hasCollege', 0);
+        $region_ids = University::where('hasCollege', 1)->groupBy('region_id')->pluck('region_id');
+        if($request->region){
+            $universities = $universities->where('region_id', $request->region)->get();
+            $r = $request->region;
+        }
+        else{
+            $universities = $universities->get();
+        }
+        $regions = Region::whereIn('id', $region_ids)->get();
+        return view('college-list', compact('regions', 'r'))->with('universities', $universities)->with('map', 'Главная , Навигатор , Список ВУЗов')->with('navActive', 1);
     }
     public function partnerList(){
         $partners = Parner::all();

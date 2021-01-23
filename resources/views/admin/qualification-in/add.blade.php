@@ -39,7 +39,7 @@
                                     <select required name="specialty_id" class="city seLect2 form-control">
                                         <option></option>
                                         @foreach($qualifications as $q)
-                                            <option @if(is_object($cost_education) && $cost_education->specialty_id == $q->id) selected @endif value="{{ $q->id }}">{{ $q->qualification }} - {{$q->lpg->name_ru}} - {{$q->education_time}} - {{$q->relEducationForm->name}}</option>
+                                            <option @if(is_object($cost_education) && $cost_education->specialty_id == $q->id) selected @endif value="{{ $q->id }}">{{ $q->qualification }} - {{$q->lpg->name_ru}} @if($t > 3 || $t < 2) {{($q->relIncome)?'- '.$q->relIncome->name:''}} @elseif($t == 2) {{($q->relSphere)?'- '.$q->relSphere->name_ru:''}} @endif - {{$q->education_time}} - {{$q->relEducationForm->name}}</option>
                                         @endforeach
                                     </select>
                             </div>

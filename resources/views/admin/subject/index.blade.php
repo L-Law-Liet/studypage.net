@@ -11,6 +11,12 @@
         <div class="col-md-12">
             <div class="box">
                 <div class="box-header with-border">
+                    @if($t != 'univer')
+                        <form style="display: inline" action="{{route('admin.subject', 'college')}}" method="get">
+                            <input style="width: 84%; margin-right: 1rem; display: inline-block" name="n" class="form-control" placeholder="Профессиональная дисциплина" type="text" @if(isset($n)) value="{{ $n }}" @endif>
+                            <button class="btn btn-info" type="submit">Поиск</button>
+                        </form>
+                    @endif
                     <a href="{{url('admin/subject/'.$t.'/add')}}" class="btn btn-success pull-right">Добавить</a>
                 </div>
                 <div class="box-body">

@@ -29,7 +29,13 @@
                             <tr>
                                 <td>{{ $sliders->firstItem()+$k }}</td>
                                 <td>{{ date('d.m.Y', strtotime($v->created_at)) }}</td>
-                                <td><img width="100" height="100" src="{{ asset('/img/sliders/'.$v->image) }}" alt=""></td>
+                                <td>
+                                    @if($v->image)
+                                        <img width="100" height="100" src="{{ asset('/img/sliders/'.$v->image) }}" alt="">
+                                    @else
+                                        Слайдер {{$k+1}}
+                                    @endif
+                                </td>
                                 <td id="description">{!! $v->text !!}</td>
                                 <td>
                                     <a href="/admin/slider/view/{{ $v->id }}">

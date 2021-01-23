@@ -11,7 +11,11 @@
         @endif
     </h1>
 @stop
-
+<style>
+    table * {
+        font-size: 12px;
+    }
+</style>
 @section('content')
     <div class="row">
         <div class="col-md-12">
@@ -37,6 +41,15 @@
                                  @else
                                      <th>Группа образовательных программ</th>
                                  @endif
+                                 <th>
+                                     @if($t < 2 || $t > 3)
+                                         Поступление в {{($t == 4)?'колледж':'ВУЗ'}}
+                                     @elseif($t == 2)
+                                         Сфера направления
+                                     @endif
+                                 </th>
+                                 <th>Срок обучения</th>
+                                 <th>Форма обучения</th>
                                  <th>Стоимости</th>
                                  <th>Год обучение</th>
                                  <th width="9%" colspan="3" class="text-center">Действие</th>
@@ -49,6 +62,15 @@
                                 <td>{{ $v->relUniversity->name_ru??'Не указано' }}</td>
                                 <td>{{ $v->relSpecialty->qualification??'Не указано' }}</td>
                                 <td>{{ $v->relSpecialty->lpg->name_ru??'Не указано' }}</td>
+                                <td>
+                                    @if($t < 2 || $t > 3)
+                                        {{ $v->relSpecialty->relIncome->name??'Не указано' }}
+                                    @elseif($t == 2)
+                                        {{ $v->relSpecialty->relSphere->name_ru??'Не указано' }}
+                                    @endif
+                                </td>
+                                <td>{{ $v->relSpecialty->education_time??'Не указано' }}</td>
+                                <td>{{ $v->relSpecialty->relEducationForm->name??'Не указано' }}</td>
                                 <td>{{ $v->price??'-' }}</td>
                                 <td>{{ $v->year??'Не указано' }}</td>
                                 <td>

@@ -37,6 +37,14 @@
                 pause:6000,
                 video: true,
             });
+            $('.slider-lists').bxSlider({
+                speed:1000,
+                autoControls:false,
+                controls:true,
+                pager:false,
+                infiniteLoop:false,
+                hideControlOnEnd:true,
+            })
         });
     </script>
 
@@ -53,20 +61,22 @@
                     {{ session('status') }}
                 </div>
             @endif
-            <div class="clearfix pt-5">
-                <div style="height: 340px" class="slider">
-                    @foreach(\App\Slider::where('show', true)->get() as $slider)
-                        <div class="d-flex flex-md-row flex-column">
-                            <div class="slider-media-container">
-                                @if($slider->video)
-                                    <iframe rel="preload" style="width: 100%; height: 100%" src="{{$slider->video.'?autoplay=1&mute=1&controls=0'}}"></iframe>
-                                @else
-                                    <img style="width: 100%; height: 100%" src="{{asset('/img/sliders/'.$slider->image)}}" alt="omg">
-                                @endif
+            <div class="clearfix" style="padding-top: 2rem;">
+                <div class="slider-container-div">
+                    <div style="height: 340px" class="slider">
+                        @foreach(\App\Slider::where('show', true)->get() as $slider)
+                            <div class="d-flex flex-md-row flex-column">
+                                <div class="slider-media-container">
+                                    @if($slider->video)
+                                        <iframe rel="preload" style="width: 100%; height: 100%" src="{{$slider->video.'?&mute=1&controls=0'}}"></iframe>
+                                    @else
+                                        <img style="width: 100%; height: 100%" src="{{asset('/img/sliders/'.$slider->image)}}" alt="omg">
+                                    @endif
+                                </div>
+                                <div class="slider-text">{!! $slider->text !!}</div>
                             </div>
-                            <div class="slider-text">{!! $slider->text !!}</div>
-                        </div>
-                    @endforeach
+                        @endforeach
+                    </div>
                 </div>
             </div>
                 @include('parts.edu-services')
@@ -81,4 +91,12 @@
         $('.cityc').chosen();
         $('.degreec').chosen();
     </script>
+
+    <div class="start-socials">
+        <ul>
+            <li><a class="sprites instagram" href="{{\App\Models\Social::find(2)->link}}" target="_blank">Instagram</a></li>
+            <li><a class="sprites facebook" href="{{\App\Models\Social::find(5)->link}}" target="_blank">Facebook</a></li>
+            <li><a class="sprites youtube" href="{{\App\Models\Social::find(3)->link}}" target="_blank">Youtube</a></li>
+        </ul>
+    </div>
 @endsection
