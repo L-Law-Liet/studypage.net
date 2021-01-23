@@ -19,7 +19,7 @@
                             <tr>
                                 <th width="2%">#</th>
                                 <th>Дата создания</th>
-                                <th>Параметр</th>
+                                <th width="10%">Параметр</th>
                                 <th>Описание</th>
                                 <th width="5%" colspan="3" class="text-center">Действие</th>
                             </tr>
@@ -29,13 +29,7 @@
                             <tr>
                                 <td>{{ $sliders->firstItem()+$k }}</td>
                                 <td>{{ date('d.m.Y', strtotime($v->created_at)) }}</td>
-                                <td>
-                                    @if($v->image)
-                                        <img width="100" height="100" src="{{ asset('/img/sliders/'.$v->image) }}" alt="">
-                                    @else
-                                        Слайдер {{$k+1}}
-                                    @endif
-                                </td>
+                                <td>Слайдер {{$k+1}}</td>
                                 <td id="description">{!! $v->text !!}</td>
                                 <td>
                                     <a href="/admin/slider/view/{{ $v->id }}">

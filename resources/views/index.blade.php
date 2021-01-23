@@ -68,7 +68,7 @@
                             <div class="d-flex flex-md-row flex-column">
                                 <div class="slider-media-container">
                                     @if($slider->video)
-                                        <iframe rel="preload" style="width: 100%; height: 100%" src="{{$slider->video.'?&mute=1&controls=0'}}"></iframe>
+                                        <img onclick="setYoutube(`{{$slider->video.'?&mute=1&controls=0&rel=0'}}`, this)" style="width: 100%; height: 100%" src="{{asset('img/play.svg')}}" alt="play">
                                     @else
                                         <img style="width: 100%; height: 100%" src="{{asset('/img/sliders/'.$slider->image)}}" alt="omg">
                                     @endif
@@ -99,4 +99,14 @@
             <li><a class="sprites youtube" href="{{\App\Models\Social::find(3)->link}}" target="_blank">Youtube</a></li>
         </ul>
     </div>
+    <script>
+        function setYoutube(link, cur){
+            var newNode = document.createElement('iframe');
+            newNode.style.width = '100%';
+            newNode.style.height = '100%';
+            newNode.setAttribute('src', link);
+            cur.style.display = "none";
+            cur.after(newNode);
+        }
+    </script>
 @endsection
