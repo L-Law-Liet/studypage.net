@@ -68,7 +68,7 @@
                             <div class="d-flex flex-md-row flex-column">
                                 <div class="slider-media-container">
                                     @if($slider->video)
-                                        <img onclick="setYoutube(`{{$slider->video.'?&mute=1&controls=0&rel=0'}}`, this)" style="width: 100%; height: 100%" src="{{asset('img/play.svg')}}" alt="play">
+                                        <img onclick="setYoutube(`{{$slider->video.'?&mute=1&controls=0&rel=0'}}`, this)" style="width: 100%; height: 100%" src="{{asset('img/play.png')}}" alt="play">
                                     @else
                                         <img style="width: 100%; height: 100%" src="{{asset('/img/sliders/'.$slider->image)}}" alt="omg">
                                     @endif

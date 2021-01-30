@@ -34,10 +34,10 @@
                                 echo "<span class='subnav-last-child'>$map[$i]</span>";
                                 break;
                                 case 'Список колледжей':
-                        echo "<a class=\"underline\" href=\"".url('navigator/list/college')."\">$map[$i]</a>";
+                        echo "<a class=\"underline\" href=\"".url('qazaqstan/navigator/list/college')."\">$map[$i]</a>";
                                     break;
                                 case 'Список ВУЗов':
-                        echo "<a class=\"underline\" href=\"".url('navigator/list/vuz')."\">$map[$i]</a>";
+                        echo "<a class=\"underline\" href=\"".url('qazaqstan/navigator/list/vuz')."\">$map[$i]</a>";
                                     break;
                                     case $university->name_ru??true:
 

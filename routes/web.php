@@ -16,7 +16,8 @@ use App\Http\Middleware\CheckAdmin;
 Route::group([
     'prefix' => 'admin',
     'namespace' => 'Admin',
-    'middleware' => ['auth', CheckAdmin::class]], function (){
+    'middleware' => ['auth', CheckAdmin::class]],
+    function (){
     Route::get('/', 'DashboardController@dashboard')->name('admin');
 
     Route::prefix('university')->group(function () {
@@ -370,12 +371,12 @@ Route::get('/', function (){
 Route::get('/city/view/{id?}', 'IndexController@getCity')->name('city');
 Route::get('/navigator/view/{id}', 'IndexController@getNavigator')->name('navigator');
 Route::get('/navigator', 'IndexController@getNavigator1')->name('navigator');
-Route::get('/college/vuz', 'IndexController@getArticle');
-Route::get('/add', 'IndexController@getArticle');
-Route::get('/about', 'IndexController@getArticle');
-Route::get('/advertisers', 'IndexController@getArticle');
-Route::get('/agreement', 'IndexController@getArticle');
-Route::get('/confidential', 'IndexController@getArticle');
+Route::get('/qazaqstan/college/vuz', 'IndexController@getArticle')->name('college-vuz');
+Route::get('/qazaqstan/add', 'IndexController@getArticle')->name('vuz.add');
+Route::get('/qazaqstan/about', 'IndexController@getArticle')->name('about');
+Route::get('/qazaqstan/advertisers', 'IndexController@getArticle')->name('advertisers');
+Route::get('/qazaqstan/agreement', 'IndexController@getArticle')->name('agreement');
+Route::get('/qazaqstan/confidential', 'IndexController@getArticle')->name('confidential');
 //Route::get('/test/', 'IndexController@getTest')->name('test');
 Route::get('/callback', 'IndexController@getCallback')->name('callback');
 Route::post('/callback', 'IndexController@postCallback')->name('callbackPost');
@@ -405,16 +406,16 @@ Route::prefix('/vuz/doctor')->group(function () {
 //Route::get('/doctor/{pages}/{degree?}', 'PagesController@showDoctor')->name('doctor');
 Route::get('/vuz', 'PagesController@showDoctor')->name('doctor.vuz');
 
-Route::prefix('/navigator/rating')->group(function(){
+Route::prefix('/qazaqstan/navigator/rating')->group(function(){
     Route::get('college/{type}/{id?}', 'PagesController@multiRating');
     Route::get('vuz/{type}/{id?}', 'PagesController@multiRating');
 });
-Route::get('navigator/faq/1', 'PagesController@showFAQ');
-Route::get('navigator/faq/{id}', 'PagesController@showFAQ');
-Route::get('navigator/list/partner', 'PagesController@partnerList');
-Route::get('/navigator/list/vuz', 'PagesController@univerList')->name('list.vuz');
-Route::get('/navigator/list/college', 'PagesController@collegeList')->name('list.college');
-Route::prefix('navigator/list/{name}')->group(function (){
+Route::get('qazaqstan/navigator/faq/1', 'PagesController@showFAQ')->name('faq');
+Route::get('qazaqstan/navigator/faq/{id}', 'PagesController@showFAQ')->name('faq.view');
+Route::get('qazaqstan/navigator/list/partner', 'PagesController@partnerList')->name('partner');
+Route::get('/qazaqstan/navigator/list/vuz', 'PagesController@univerList')->name('list.vuz');
+Route::get('/qazaqstan/navigator/list/college', 'PagesController@collegeList')->name('list.college');
+Route::prefix('qazaqstan/navigator/list/{name}')->group(function (){
     Route::get('/view/{id}/{nav?}', 'PagesController@attributesCollegeFromList')->name('college.view');
 });
 Route::post('cabinet/edit', 'UserController@edit');
