@@ -24,9 +24,15 @@
                         @csrf
                         <div class="form-group row">
                             <label class="col-md-3">Изображение</label>
-                            <div class="col-md-9">
+
+                            <div class="col-md-4">
                                 <input {{isset($slider->image)?'':'required'}} type="file" accept=".png,.jpg,.jpeg," name="image">
                             </div>
+                            @isset($slider->image)
+                                <div class="col-md-5">
+                                    <img width="150" src="{{asset('/img/sliders/'.$slider->image)}}" alt="imgm">
+                                </div>
+                            @endisset
                         </div>
                         <div class="form-group row">
                             <label class="col-md-3">Видео</label>
