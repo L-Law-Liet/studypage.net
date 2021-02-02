@@ -354,7 +354,6 @@ Route::get('/cabinet', 'CabinetController@index')->name('cabinet');
 Route::get('/poisk/bakalavriat/', 'PoiskController@index')->name('bakalavriat');
 Route::get('/poisk/magistratura/', 'PoiskController@index')->name('magistratura');
 Route::get('/poisk/doktorantura/', 'PoiskController@index')->name('doktorantura');
-Route::get('/rating/', 'RatingController@index')->name('rating');
 Route::get('/list/', 'ListController@index')->name('list');
 Route::get('/fmain/{degree_id}/{direction_id}/{city_id}/{query}', 'ListController@getFmain')->name('list');
 Route::get('/faqs', 'FaqController@index')->name('faqs');
