@@ -383,7 +383,7 @@ Route::get('/cabinet', 'PagesController@showCabinet');
 Route::get('/change-pwd', 'PagesController@changePassword')->name('change-pwd');
 Route::prefix('')->group(function (){
     Route::get('/qazaqstan/search/colleges', 'PagesController@showDoctor')->name('doctor.college');
-    Route::get('/college/view/{sid}/uid/{uid}', 'PagesController@viewCollege');
+    Route::get('/qazaqstan/search/colleges/view/{sid}/uid/{uid}', 'PagesController@viewCollege');
 });
 Route::prefix('/qazaqstan/search/bachelor')->group(function (){
     Route::get('/', 'PagesController@showDoctor')->name('doctor.under');
