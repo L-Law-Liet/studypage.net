@@ -26,7 +26,7 @@
                             <td>{{($us[(($i == 0)?1:$i)-1]->rating == $us[$i]->rating)?$n:++$n}}</td>
                             <td>
                             @if($us[$i]->description)
-                                <a class="college-list-a" href="{{route('college.view', ['name' => ($type != 2)?'college':'vuz', 'id' => $us[$i]->university_id])}}">{{$us[$i]->name_ru}}</a>
+                                <a class="college-list-a" href="{{route('college.view', ['name' => ($type != 2)?'college':'universities', 'id' => $us[$i]->university_id])}}">{{$us[$i]->name_ru}}</a>
                             @else
                                 <a class="college-list-a passive-list-a" style="cursor: default">{{$us[$i]->name_ru}}</a>
                             @endif
@@ -43,7 +43,7 @@
             <div class="col-md-4 pl-0 order-md-last ml-2 ml-md-auto order-first">
                 <ul class="multi-profile-list">
                 @foreach(\App\Profile::where('forCollege', 2-$type)->get() as $p)
-                        <li><a href="{{url('navigator/rating', [($type-1)?'vuz':'college', $type, $p->id])}}" @if(($class ?? '') == $type.$p->id) class="color-C11800" @endif > @if(($class ?? '') == $type.$p->id) <img src="{{asset('img/arrow-dots-red.svg')}}" alt=""> @else <img src="{{asset('img/arrow-dots-black.svg')}}" alt=""> @endif {{$p->name}} </a></li>
+                        <li><a href="{{url('qazaqstan/navigator/rating', [($type-1)?'universities':'college', $type, $p->id])}}" @if(($class ?? '') == $type.$p->id) class="color-C11800" @endif > @if(($class ?? '') == $type.$p->id) <img src="{{asset('img/arrow-dots-red.svg')}}" alt=""> @else <img src="{{asset('img/arrow-dots-black.svg')}}" alt=""> @endif {{$p->name}} </a></li>
                     @endforeach
                 </ul>
             </div>

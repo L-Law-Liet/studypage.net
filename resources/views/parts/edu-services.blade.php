@@ -63,7 +63,7 @@
                     </div>
                 </div>
                 <div>
-                    <div onclick="window.location='{{url('navigator/list/vuz')}}'"
+                    <div onclick="window.location='{{url('navigator/list/universities')}}'"
                          style="width: 100%; height: 217px;
                                  background: url({{asset('img/social/'.\App\Models\Social::find(14)->link)}}) no-repeat center;
                                  background-size: cover;"
@@ -76,7 +76,7 @@
         </div>
         <div class="mobile-ent-faq row">
             <div class="col-12">
-                <div onclick="window.location='{{url('calculator-ent')}}'" class="m-ent-calc d-table" style="
+                <div onclick="window.location='{{url('qazaqstan/calculator-ent')}}'" class="m-ent-calc d-table" style="
                         width: 100%; height: 100%;
                         background: url({{asset('img/social/'.\App\Models\Social::find(11)->link)}}) no-repeat; background-size: cover;">
                     <div class="align-middle d-table-cell text-center text-white text-in-table"
@@ -107,7 +107,7 @@
                 </div>
             </div>
             <div class="col-md-6 h-50" style="padding: 0 0 .5rem .5rem;">
-                <div onclick="window.location='{{url('navigator/list/vuz')}}'"
+                <div onclick="window.location='{{url('navigator/list/universities')}}'"
                      style="width: 100%; height: 100%;
                              background: url({{asset('img/social/'.\App\Models\Social::find(14)->link)}}) no-repeat center;
                              background-size: cover"
@@ -117,7 +117,7 @@
                 </div>
             </div>
             <div class="col-md-6 h-50" style="padding: .5rem .5rem 0 0;">
-                <div onclick="window.location='{{url('calculator-ent')}}'" class="clickable-el m-ent-calc d-table" style="
+                <div onclick="window.location='{{url('qazaqstan/calculator-ent')}}'" class="clickable-el m-ent-calc d-table" style="
                         width: 100%; height: 100%;
                         background: url({{asset('img/social/'.\App\Models\Social::find(11)->link)}}) no-repeat; background-size: cover;">
                     <div class="align-middle d-table-cell text-center text-white text-in-table"

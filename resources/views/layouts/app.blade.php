@@ -174,7 +174,7 @@
                 </li>
                 <li class="rating-mob-slide last-rating">
                     <img style="margin-right: 5px;" src="{{asset('/img/arrow-dots-grey.svg')}}" alt="->">
-                    <a href="{{url('qazaqstan/navigator/rating/vuz', 2)}}">Рейтинг ВУЗов</a>
+                    <a href="{{url('qazaqstan/navigator/rating/universities', 2)}}">Рейтинг ВУЗов</a>
                 </li>
                 </div>
                 <li><a class="nav-clicked dropdown-toggle">Навигатор</a></li>
@@ -185,7 +185,7 @@
                 </li>
                 <li>
                     <img style="margin-right: 5px;" src="{{asset('/img/arrow-dots-grey.svg')}}" alt="->">
-                    <a class="" href="{{url('qazaqstan/navigator/list/vuz')}}">Список ВУЗов</a>
+                    <a class="" href="{{url('qazaqstan/navigator/list/universities')}}">Список ВУЗов</a>
                 </li>
                 <li>
                     <img style="margin-right: 5px;" src="{{asset('/img/arrow-dots-grey.svg')}}" alt="->">
@@ -196,7 +196,7 @@
                     <a href="{{route('partner')}}">Партнеры</a>
                 </li>
                 </div>
-                <li><a class="" href="{{url('calculator-ent')}}">Калькулятор ЕНТ</a></li>
+                <li><a class="" href="{{url('qazaqstan/calculator-ent')}}">Калькулятор ЕНТ</a></li>
             </ul>
         </div>
     </div>
@@ -221,7 +221,7 @@
                                 </div>
                                 <div class="col-md-6 p-0 nav-items">
                                     <img style="margin-bottom: 3px;" src="{{asset('/img/arrow-dots-black.svg')}}" alt="->">
-                                    <a href="{{url('qazaqstan/navigator/rating/vuz', 2)}}">РЕЙТИНГ ВУЗОВ</a>
+                                    <a href="{{url('qazaqstan/navigator/rating/universities', 2)}}">РЕЙТИНГ ВУЗОВ</a>
                                 </div>
                             </div>
                         </div>
@@ -240,7 +240,7 @@
                                         </div>
                                         <div class="nav-items">
                                             <img style="margin-bottom: 3px;" src="{{asset('/img/arrow-dots-black.svg')}}" alt="->">
-                                            <a href="{{url('/qazaqstan/navigator/list/vuz')}}">СПИСОК ВУЗОВ</a>
+                                            <a href="{{url('/qazaqstan/navigator/list/universities')}}">СПИСОК ВУЗОВ</a>
                                         </div>
                                     </div>
                                     <div class="col-md-6 p-0">
@@ -258,7 +258,7 @@
                             </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link  @if(($active ?? '') == 'ent-calc')active @endif" href="{{url('calculator-ent')}}">КАЛЬКУЛЯТОР ЕНТ</a>
+                        <a class="nav-link  @if(($active ?? '') == 'ent-calc')active @endif" href="{{url('qazaqstan/calculator-ent')}}">КАЛЬКУЛЯТОР ЕНТ</a>
                     </li>
 {{--                    <li class="nav-item">--}}
 {{--                        <a class="nav-link @if(Request::path() == 'rating') active @endif" href="/rating/">{{ trans('general.rating_he') }}</a>--}}
@@ -308,13 +308,13 @@
                                     <a href="{{url('qazaqstan/navigator/rating/college', 1)}}">Рейтинг колледжей</a>
                                 </li>
                                 <li>
-                                    <a href="{{url('qazaqstan/navigator/rating/vuz', 2)}}">Рейтинг ВУЗов</a>
+                                    <a href="{{url('qazaqstan/navigator/rating/universities', 2)}}">Рейтинг ВУЗов</a>
                                 </li>
                                 <li>
                                     <a href="{{url('qazaqstan/navigator/list/college')}}">Список колледжей</a>
                                 </li>
                                 <li>
-                                    <a href="{{url('qazaqstan/navigator/list/vuz')}}">Список ВУЗов</a>
+                                    <a href="{{url('qazaqstan/navigator/list/universities')}}">Список ВУЗов</a>
                                 </li>
                             </ul>
                         </li>
@@ -348,7 +348,7 @@
                                     <a href="{{url('callback')}}">Обратная связь</a>
                                 </li>
                                 <li>
-                                    <a href="{{url('/city/view')}}">ВУЗы в городах Казахстана</a>
+                                    <a href="{{url('/qazaqstan/city/view')}}">ВУЗы в городах Казахстана</a>
                                 </li>
                             </ul>
                         </li>

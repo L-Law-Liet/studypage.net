@@ -37,7 +37,7 @@
                         echo "<a class=\"underline\" href=\"".url('qazaqstan/navigator/list/college')."\">$map[$i]</a>";
                                     break;
                                 case 'Список ВУЗов':
-                        echo "<a class=\"underline\" href=\"".url('qazaqstan/navigator/list/vuz')."\">$map[$i]</a>";
+                        echo "<a class=\"underline\" href=\"".url('qazaqstan/navigator/list/universities')."\">$map[$i]</a>";
                                     break;
                                     case $university->name_ru??true:
 

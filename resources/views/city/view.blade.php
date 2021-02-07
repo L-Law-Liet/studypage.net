@@ -18,7 +18,7 @@
                 <ul class="nav flex-column">
                     @foreach($cities as $k => $v)
                         <li class="nav-item">
-                            <a class="nav-link @if($k == $city->id) active @endif" href="/city/view/{{$k}}">
+                            <a class="nav-link @if($k == $city->id) active @endif" href="/qazaqstan/city/view/{{$k}}">
                                 <span class="sprites @if($k == $city->id) down @else intern @endif"></span>{{$v}}
                             </a>
                         </li>

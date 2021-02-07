@@ -36,7 +36,7 @@
                             <td>{{ $i }}</td>
                             <td>
                                 @if($university->description)
-                                    <a class="college-list-a" href="{{route('college.view', ['name' => ($university->hasCollege)?'college':'vuz', 'id' => $university->id])}}">{{$university->name_ru}}</a>
+                                    <a class="college-list-a" href="{{route('college.view', ['name' => ($university->hasCollege)?'college':'universities', 'id' => $university->id])}}">{{$university->name_ru}}</a>
                                     @else
                                     <a class="college-list-a passive-list-a" style="cursor: default">{{$university->name_ru}}</a>
                                 @endif
