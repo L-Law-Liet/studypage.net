@@ -57,13 +57,13 @@
                          style="width: 100%; height: 217px;
                                  background: url({{asset('img/social/'.\App\Models\Social::find(13)->link)}}) no-repeat center;
                                  background-size: cover;">
-                        <div onclick="window.location='{{url('navigator/list/college')}}'"
+                        <div onclick="window.location='{{route('list.college')}}'"
                              class="align-middle d-table-cell text-center text-white"
                              style="font-size: 20px">СТРАНИЦА КОЛЛЕДЖЕЙ</div>
                     </div>
                 </div>
                 <div>
-                    <div onclick="window.location='{{url('navigator/list/universities')}}'"
+                    <div onclick="window.location='{{route('list.vuz')}}'"
                          style="width: 100%; height: 217px;
                                  background: url({{asset('img/social/'.\App\Models\Social::find(14)->link)}}) no-repeat center;
                                  background-size: cover;"
@@ -101,13 +101,13 @@
                      style="width: 100%; height: 100%;
                              background: url({{asset('img/social/'.\App\Models\Social::find(13)->link)}}) no-repeat center;
                              background-size: cover">
-                    <div onclick="window.location='{{url('navigator/list/college')}}'"
+                    <div onclick="window.location='{{route('list.college')}}'"
                          class="align-middle d-table-cell text-center text-white"
                          style="font-size: 20px">СТРАНИЦА КОЛЛЕДЖЕЙ</div>
                 </div>
             </div>
             <div class="col-md-6 h-50" style="padding: 0 0 .5rem .5rem;">
-                <div onclick="window.location='{{url('navigator/list/universities')}}'"
+                <div onclick="window.location='{{route('list.vuz')}}'"
                      style="width: 100%; height: 100%;
                              background: url({{asset('img/social/'.\App\Models\Social::find(14)->link)}}) no-repeat center;
                              background-size: cover"

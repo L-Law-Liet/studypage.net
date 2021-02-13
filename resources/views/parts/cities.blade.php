@@ -15,7 +15,7 @@
                                 </figure>
                                 <div class="post-teaser-post-info">
                                     <div class="text">
-                                        <h3><a class="outline-0" href="/city/view/{{ $v->id }}">{{$v->name_ru}}</a></h3>
+                                        <h3><a class="outline-0" href="/qazaqstan/city/view/{{ $v->id }}">{{$v->name_ru}}</a></h3>
                                     </div>
                                 </div>
                             </div>

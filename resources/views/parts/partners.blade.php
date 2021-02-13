@@ -5,7 +5,7 @@
     <div class="slick-slider">
         @foreach($partners as $k => $v)
             <div class="">
-                <a href="{{url('navigator/list/partner')}}">
+                <a href="{{route('partner')}}">
                     <img style="height: 120px" class="m-auto img-fluid" data-lazy="{{asset("/img/partners/$v->image")}}">
                 </a>
             </div>

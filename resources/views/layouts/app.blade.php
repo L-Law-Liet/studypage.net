@@ -311,10 +311,10 @@
                                     <a href="{{url('qazaqstan/navigator/rating/universities', 2)}}">Рейтинг ВУЗов</a>
                                 </li>
                                 <li>
-                                    <a href="{{url('qazaqstan/navigator/list/college')}}">Список колледжей</a>
+                                    <a href="{{route('list.college')}}">Список колледжей</a>
                                 </li>
                                 <li>
-                                    <a href="{{url('qazaqstan/navigator/list/universities')}}">Список ВУЗов</a>
+                                    <a href="{{route('list.vuz')}}">Список ВУЗов</a>
                                 </li>
                             </ul>
                         </li>
@@ -345,7 +345,7 @@
                                     <a href="{{route('vuz.add')}}">Добавить колледж/ВУЗ</a>
                                 </li>
                                 <li>
-                                    <a href="{{url('callback')}}">Обратная связь</a>
+                                    <a href="{{url('qazaqstan/callback')}}">Обратная связь</a>
                                 </li>
                                 <li>
                                     <a href="{{url('/qazaqstan/city/view')}}">ВУЗы в городах Казахстана</a>
