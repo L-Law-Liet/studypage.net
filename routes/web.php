@@ -365,8 +365,8 @@ Route::get('/', 'IndexController@index')->name('index');
 Route::get('/qazaqstan/city/view/{id?}', 'IndexController@getCity')->name('city');
 Route::get('/navigator/view/{id}', 'IndexController@getNavigator')->name('navigator');
 Route::get('/navigator', 'IndexController@getNavigator1')->name('navigator');
-Route::get('/qazaqstan/college/vuz', 'IndexController@getArticle')->name('college-vuz');
-Route::get('/qazaqstan/colleges/universities', 'IndexController@getArticle')->name('vuz.add');
+Route::get('/qazaqstan/colleges/universities', 'IndexController@getArticle')->name('college-vuz');
+Route::get('/qazaqstan/add', 'IndexController@getArticle')->name('vuz.add');
 Route::get('/qazaqstan/about', 'IndexController@getArticle')->name('about');
 Route::get('/qazaqstan/advertisers', 'IndexController@getArticle')->name('advertisers');
 Route::get('/qazaqstan/agreement', 'IndexController@getArticle')->name('agreement');
@@ -398,17 +398,17 @@ Route::prefix('/qazaqstan/search/universities/doctor')->group(function () {
     Route::get('/view/{sid}/uid/{uid}', 'PagesController@viewCollege');
 });
 //Route::get('/doctor/{pages}/{degree?}', 'PagesController@showDoctor')->name('doctor');
-Route::get('/universities', 'PagesController@showDoctor')->name('doctor.vuz');
+Route::get('/qazaqstan/search/universities', 'PagesController@showDoctor')->name('doctor.vuz');
 
 Route::prefix('/qazaqstan/navigator/rating')->group(function(){
-    Route::get('college/{type}/{id?}', 'PagesController@multiRating');
+    Route::get('colleges/{type}/{id?}', 'PagesController@multiRating');
     Route::get('universities/{type}/{id?}', 'PagesController@multiRating');
 });
 Route::get('qazaqstan/navigator/faq/1', 'PagesController@showFAQ')->name('faq');
 Route::get('qazaqstan/navigator/faq/{id}', 'PagesController@showFAQ')->name('faq.view');
-Route::get('qazaqstan/navigator/list/partner', 'PagesController@partnerList')->name('partner');
+Route::get('qazaqstan/navigator/list/partners', 'PagesController@partnerList')->name('partner');
 Route::get('/qazaqstan/navigator/list/universities', 'PagesController@univerList')->name('list.vuz');
-Route::get('/qazaqstan/navigator/list/college', 'PagesController@collegeList')->name('list.college');
+Route::get('/qazaqstan/navigator/list/colleges', 'PagesController@collegeList')->name('list.college');
 Route::prefix('qazaqstan/navigator/list/{name}')->group(function (){
     Route::get('/view/{id}/{nav?}', 'PagesController@attributesCollegeFromList')->name('college.view');
 });

@@ -12,7 +12,7 @@
                     for ($i = 0; $i < count($map)-1; $i++){
                         switch (trim($map[$i])){
                             case 'Главная':
-                        echo "<a class=\"underline\" href=\"/main\">$map[$i]</a>";
+                        echo "<a class=\"underline\" href=\"/\">$map[$i]</a>";
                                 $path = '/';
                                 break;
                             case 'Рейтинг':
@@ -34,7 +34,7 @@
                                 echo "<span class='subnav-last-child'>$map[$i]</span>";
                                 break;
                                 case 'Список колледжей':
-                        echo "<a class=\"underline\" href=\"".url('qazaqstan/navigator/list/college')."\">$map[$i]</a>";
+                        echo "<a class=\"underline\" href=\"".url('qazaqstan/navigator/list/colleges')."\">$map[$i]</a>";
                                     break;
                                 case 'Список ВУЗов':
                         echo "<a class=\"underline\" href=\"".url('qazaqstan/navigator/list/universities')."\">$map[$i]</a>";

@@ -105,7 +105,7 @@
                          class="align-middle d-table-cell text-center text-white"
                          style="font-size: 20px;">
                         СТРАНИЦА КОЛЛЕДЖЕЙ
-                    <p class="pt-2" style="line-height: 1.5rem">Информация о колледжах, образовательные программы,
+                    <p class="pt-2" style="line-height: 1.5rem; font-size: 17px">Информация о колледжах, образовательные программы,
                         документы для поступления</p></div>
                 </div>
             </div>
@@ -117,7 +117,7 @@
                      class="clickable-el d-table three-tables">
                     <div class="p-3 align-middle d-table-cell text-center text-white"
                          style="font-size: 20px">СТРАНИЦА ВУЗОВ
-                        <p class="pt-2" style="line-height: 1.5rem">Информация о ВУЗах, образовательные программы,
+                        <p class="pt-2" style="line-height: 1.5rem; font-size: 17px">Информация о ВУЗах, образовательные программы,
                             документы для поступления</p></div>
                 </div>
             </div>
@@ -128,7 +128,7 @@
                         background-size: cover; padding: .5rem">
                     <div class="align-middle d-table-cell text-center text-white text-in-table"
                          style="font-size: 20px; padding-left: 2rem; padding-right: 2rem; line-height: 1.5rem">КАЛЬКУЛЯТОР ЕНТ
-                        <p class="pt-2">Оценка шанса поступления на грант и
+                        <p class="pt-2" style="font-size: 18px">Оценка шанса поступления на грант и
                             платное отделение не выходя из дома</p></div>
                 </div>
             </div>
@@ -140,7 +140,7 @@
                      class="clickable-el d-table three-tables">
                     <div class="align-middle d-table-cell text-center text-white pr-5 pl-5"
                          style="font-size: 20px">ВОПРОСЫ И ОТВЕТЫ В СФЕРЕ ОБРАЗОВАНИЯ
-                        <p class="pt-2" style="line-height: 1.5rem">База вопросов и ответов, и консультация</p></div>
+                        <p class="pt-2" style="line-height: 1.5rem; font-size: 18px">База вопросов и ответов, и консультация</p></div>
                 </div>
             </div>
         </div>

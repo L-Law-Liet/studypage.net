@@ -170,7 +170,7 @@
                 <div class="inline w-100 sub-slideList">
                 <li class="rating-mob-slide">
                     <img style="margin-right: 5px;" src="{{asset('/img/arrow-dots-grey.svg')}}" alt="->">
-                    <a href="{{url('qazaqstan/navigator/rating/college', 1)}}">Рейтинг колледжей</a>
+                    <a href="{{url('qazaqstan/navigator/rating/colleges', 1)}}">Рейтинг колледжей</a>
                 </li>
                 <li class="rating-mob-slide last-rating">
                     <img style="margin-right: 5px;" src="{{asset('/img/arrow-dots-grey.svg')}}" alt="->">
@@ -181,7 +181,7 @@
                 <div class="inline w-100 sub-navigator-slide">
                 <li>
                     <img style="margin-right: 5px;" src="{{asset('/img/arrow-dots-grey.svg')}}" alt="->">
-                    <a class="" href="{{url('qazaqstan/navigator/list/college')}}">Список колледжей</a>
+                    <a class="" href="{{url('qazaqstan/navigator/list/colleges')}}">Список колледжей</a>
                 </li>
                 <li>
                     <img style="margin-right: 5px;" src="{{asset('/img/arrow-dots-grey.svg')}}" alt="->">
@@ -217,7 +217,7 @@
                             <div id="nav-inner-content-rating" class="m-2 {{ isset($is_main) ? 'is_index' : '' }} ml-4 mr-4 row p-1 nav-content">
                                 <div class="col-md-6 p-0 nav-items">
                                     <img style="margin-bottom: 3px;" src="{{asset('/img/arrow-dots-black.svg')}}" alt="->">
-                                    <a href="{{url('qazaqstan/navigator/rating/college', 1)}}">РЕЙТИНГ КОЛЛЕДЖЕЙ</a>
+                                    <a href="{{url('qazaqstan/navigator/rating/colleges', 1)}}">РЕЙТИНГ КОЛЛЕДЖЕЙ</a>
                                 </div>
                                 <div class="col-md-6 p-0 nav-items">
                                     <img style="margin-bottom: 3px;" src="{{asset('/img/arrow-dots-black.svg')}}" alt="->">
@@ -236,7 +236,7 @@
                                     <div class="col-md-6 p-0">
                                         <div class="nav-items mb-3">
                                             <img style="margin-bottom: 3px;" src="{{asset('/img/arrow-dots-black.svg')}}" alt="->">
-                                            <a href="{{url('/qazaqstan/navigator/list/college')}}">СПИСОК КОЛЛЕДЖЕЙ</a>
+                                            <a href="{{url('/qazaqstan/navigator/list/colleges')}}">СПИСОК КОЛЛЕДЖЕЙ</a>
                                         </div>
                                         <div class="nav-items">
                                             <img style="margin-bottom: 3px;" src="{{asset('/img/arrow-dots-black.svg')}}" alt="->">
@@ -305,7 +305,7 @@
                             <span>Навигатор</span>
                             <ul>
                                 <li>
-                                    <a href="{{url('qazaqstan/navigator/rating/college', 1)}}">Рейтинг колледжей</a>
+                                    <a href="{{url('qazaqstan/navigator/rating/colleges', 1)}}">Рейтинг колледжей</a>
                                 </li>
                                 <li>
                                     <a href="{{url('qazaqstan/navigator/rating/universities', 2)}}">Рейтинг ВУЗов</a>

@@ -10,7 +10,7 @@
         <div id="description" class="text-justify">
             {!! $article->description !!}
         </div>
-        @if(Request::path() == 'qazaqstan/colleges/universities')
+        @if(Request::path() == 'qazaqstan/add')
             @include('proposal')
         @endif
     </div>
