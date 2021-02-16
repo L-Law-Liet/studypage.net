@@ -19,6 +19,7 @@ use App\Models\User;
 use App\Region;
 use Illuminate\Foundation\Auth\ResetsPasswords;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Input;
@@ -105,6 +106,9 @@ class IndexController extends Controller
     }
 
     public function getTest(){
+        Artisan::call('config:cache');
+        Artisan::call('config:clear');
+        Artisan::call('route:clear');
         return view('article');
     }
 
@@ -128,10 +132,10 @@ class IndexController extends Controller
             $to_email = $mail->link;
             $data = array('name'=>$data['name'], 'phone' => $data['phone'], 'email' => $data['email'], 'question' => $data['question']);
             Mail::send('emails.mail', $data, function($message) use ($to_name, $to_email) {
-                $message->from('auth.studypage.kz@gmail.com', 'StudyPage')->to($to_email, $to_name)->subject('Обратная связь с сайта Studypage.net');
+                $message->from('info.studypage@gmail.com', 'StudyPage')->to($to_email, $to_name)->subject('Обратная связь с сайта Studypage.net');
             });
 
-            return redirect('callback')->with('success', 'Спасибо за обращение, Ваше письмо принято, мы скоро вам ответим.');
+            return redirect()->route('callback')->with('success', 'Спасибо за обращение, Ваше письмо принято, мы скоро вам ответим.');
         } else{
             $validator->errors()->add('Callback', 'Callback');
             return redirect('callback')->withInput()->withErrors($validator->errors());

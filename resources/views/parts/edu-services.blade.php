@@ -56,20 +56,24 @@
                     <div class="d-table three-tables mb-0"
                          style="width: 100%; height: 217px;
                                  background: url({{asset('img/social/'.\App\Models\Social::find(13)->link)}}) no-repeat center;
-                                 background-size: cover;">
+                                 background-size: cover; padding: 2rem">
                         <div onclick="window.location='{{route('list.college')}}'"
                              class="align-middle d-table-cell text-center text-white"
-                             style="font-size: 20px">СТРАНИЦА КОЛЛЕДЖЕЙ</div>
+                             style="font-size: 20px">СТРАНИЦА КОЛЛЕДЖЕЙ
+                            <p class="pt-2" style="line-height: 1.5rem; font-size: 17px">Информация о колледжах, образовательные программы,
+                                документы для поступления</p></div>
                     </div>
                 </div>
                 <div>
                     <div onclick="window.location='{{route('list.vuz')}}'"
                          style="width: 100%; height: 217px;
                                  background: url({{asset('img/social/'.\App\Models\Social::find(14)->link)}}) no-repeat center;
-                                 background-size: cover;"
+                                 background-size: cover; padding: 1.8rem"
                          class="clickable-el d-table three-tables mb-0">
                         <div class="p-3 align-middle d-table-cell text-center text-white"
-                             style="font-size: 20px">СТРАНИЦА ВУЗОВ</div>
+                             style="font-size: 20px">СТРАНИЦА ВУЗОВ
+                            <p class="pt-2" style="line-height: 1.5rem; font-size: 17px">Информация о ВУЗах, образовательные программы,
+                                документы для поступления</p></div>
                     </div>
                 </div>
             </div>
@@ -78,19 +82,23 @@
             <div class="col-12">
                 <div onclick="window.location='{{url('qazaqstan/calculator-ent')}}'" class="m-ent-calc d-table" style="
                         width: 100%; height: 100%;
-                        background: url({{asset('img/social/'.\App\Models\Social::find(11)->link)}}) no-repeat; background-size: cover;">
+                        background: url({{asset('img/social/'.\App\Models\Social::find(11)->link)}}) no-repeat; background-size: cover;
+                        padding: 3rem 2.5rem">
                     <div class="align-middle d-table-cell text-center text-white text-in-table"
-                         style="font-size: 20px">КАЛЬКУЛЯТОР ЕНТ</div>
+                         style="font-size: 20px">КАЛЬКУЛЯТОР ЕНТ
+                        <p class="pt-2" style="font-size: 17px; line-height: 1.5">Оценка шанса поступления на грант и
+                            платное отделение не выходя из дома</p></div>
                 </div>
             </div>
             <div class="col-12">
-                <div onclick="window.location='{{url('navigator/faq/1')}}'"
+                <div onclick="window.location='{{route('faq')}}'"
                      style="width: 100%; height: 100%;
                              background: url({{asset('img/social/'.\App\Models\Social::find(15)->link)}}) no-repeat center;
-                             background-size: cover;"
+                             background-size: cover; padding: 2.5rem 2rem"
                      class="clickable-el d-table three-tables">
                     <div class="align-middle d-table-cell text-center text-white pr-4 pl-4"
-                    style="font-size: 20px">ВОПРОСЫ И ОТВЕТЫ В СФЕРЕ ОБРАЗОВАНИЯ</div>
+                    style="font-size: 20px">ВОПРОСЫ И ОТВЕТЫ В СФЕРЕ ОБРАЗОВАНИЯ
+                        <p class="pt-2" style="line-height: 1.5rem; font-size: 17px">База вопросов и ответов, и консультация</p></div>
                 </div>
             </div>
         </div>
@@ -128,19 +136,19 @@
                         background-size: cover; padding: .5rem">
                     <div class="align-middle d-table-cell text-center text-white text-in-table"
                          style="font-size: 20px; padding-left: 2rem; padding-right: 2rem; line-height: 1.5rem">КАЛЬКУЛЯТОР ЕНТ
-                        <p class="pt-2" style="font-size: 18px">Оценка шанса поступления на грант и
+                        <p class="pt-2" style="font-size: 17px">Оценка шанса поступления на грант и
                             платное отделение не выходя из дома</p></div>
                 </div>
             </div>
             <div class="col-md-6 h-50" style="padding: .5rem 0 0 .5rem;">
-                <div onclick="window.location='{{url('navigator/faq/1')}}'"
+                <div onclick="window.location='{{route('faq')}}'"
                      style="width: 100%; height: 100%;
                              background: url({{asset('img/social/'.\App\Models\Social::find(15)->link)}}) no-repeat center;
                              background-size: cover; padding: .5rem"
                      class="clickable-el d-table three-tables">
                     <div class="align-middle d-table-cell text-center text-white pr-5 pl-5"
                          style="font-size: 20px">ВОПРОСЫ И ОТВЕТЫ В СФЕРЕ ОБРАЗОВАНИЯ
-                        <p class="pt-2" style="line-height: 1.5rem; font-size: 18px">База вопросов и ответов, и консультация</p></div>
+                        <p class="pt-2" style="line-height: 1.5rem; font-size: 17px">База вопросов и ответов, и консультация</p></div>
                 </div>
             </div>
         </div>
