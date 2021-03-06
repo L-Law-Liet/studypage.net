@@ -563,7 +563,7 @@ a:hover, a.active{
     color: #c11800;
 }
 .passive-list-a:hover {
-    font-size: 16px !important;
+    font-size: unset !important;
 }
 .facebook-teaser-rebrush p.fb-title {
     margin-bottom: 25px;

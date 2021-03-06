@@ -37,7 +37,6 @@
     <script src="{{asset('js/chosen.jquery.min.js')}}"></script>
     <script src="{{asset('js/jquery.mask.min.js')}}"></script>
     <script src="{{asset('js/bootstrap-datepicker.js')}}"></script>
-
     <link rel="stylesheet" href="{{asset('css/bootstrap-datepicker.css')}}">
 
     @yield('js')
@@ -55,6 +54,21 @@
     <link href="{{asset('css/chosen.min.css')}}" rel="stylesheet" type="text/css">
 @stack('css')
     <script src="{{asset('js/metrics.js')}}"></script>
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+        ym(72571912, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true
+        });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/72571912" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-179408693-1"></script>
     <noscript><div><img src="https://mc.yandex.ru/watch/67815946" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 </head>

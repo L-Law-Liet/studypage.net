@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'failed' => 'Неверный формат электронной почти или пароля',
+    'failed' => 'Неверный формат электронной почты или пароля',
     'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
     'registration_successful' => 'Регистрация прошла успешна, проверьте свою электронную почту, чтобы активировать свою учетную запись.',
     'activation_successful' => 'Вы успешно активировали свой аккаунт',

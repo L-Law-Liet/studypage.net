@@ -58,7 +58,7 @@ class ENTController extends Controller
             $data['education_form'] = CostEducation::findOrFail($id);
         }
 
-        return view('admin.ent.add', compact('us'), $data);
+        return view('admin.ent.add', $data);
     }
     public function postAdd($id = null){
         $data = Input::all();
@@ -106,18 +106,23 @@ class ENTController extends Controller
         $search = '%'.$request->search.'%';
         if ($search == ''){
             $us = DB::select("select c.id, concat(u.name_ru, ' - ',
- lpg.name_ru, ' - ', s.qualification) as text from cost_education c 
+ lpg.name_ru, ' - ', s.qualification, ' - ',
+ s.education_time, ' - ', ef.name) as text from cost_education c 
  join specialties s on c.specialty_id = s.id 
- join learn_program_groups lpg on s.learn_program_group_id = lpg.id 
- join universities u on c.university_id = u.id where c.language is null and lpg.degree_id = 1");
+ join learn_program_groups lpg on s.learn_program_group_id = lpg.id
+ join education_forms ef on s.education_form = ef.id
+ join universities u on c.university_id = u.id where c.language is null and lpg.degree_id = 1 and s.income = 3");
         }
         else{
             $us = DB::select("select c.id, concat(u.name_ru, ' - ',
- lpg.name_ru, ' - ', s.qualification) as text from cost_education c 
+ lpg.name_ru, ' - ', s.qualification, ' - ',
+ s.education_time, ' - ', ef.name) as text from cost_education c 
  join specialties s on c.specialty_id = s.id 
- join learn_program_groups lpg on s.learn_program_group_id = lpg.id 
- join universities u on c.university_id = u.id where c.language is null and lpg.degree_id = 1 and
-  (concat(u.name_ru, ' - ', lpg.name_ru, ' - ', s.qualification) like :searchName)", ['searchName' => $search]);
+ join learn_program_groups lpg on s.learn_program_group_id = lpg.id
+ join education_forms ef on s.education_form = ef.id
+ join universities u on c.university_id = u.id where c.language is null and lpg.degree_id = 1 and s.income = 3 and
+  (concat(u.name_ru, ' - ', lpg.name_ru, ' - ', s.qualification, ' - ',
+ s.education_time, ' - ', ef.name) like :searchName)", ['searchName' => $search]);
         }
 
         return response()->json($us);

@@ -371,7 +371,6 @@ Route::get('/qazaqstan/about', 'IndexController@getArticle')->name('about');
 Route::get('/qazaqstan/advertisers', 'IndexController@getArticle')->name('advertisers');
 Route::get('/qazaqstan/agreement', 'IndexController@getArticle')->name('agreement');
 Route::get('/qazaqstan/confidential', 'IndexController@getArticle')->name('confidential');
-//Route::get('/test/', 'IndexController@getTest')->name('test');
 Route::get('/qazaqstan/callback', 'IndexController@getCallback')->name('callback');
 Route::post('/qazaqstan/callback', 'IndexController@postCallback')->name('callbackPost');
 Route::post('/proposal', 'IndexController@postProposal');

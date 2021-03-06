@@ -105,13 +105,6 @@ class IndexController extends Controller
         return view('article', $data)->with('map', 'Главная , '.$map);
     }
 
-    public function getTest(){
-        Artisan::call('config:cache');
-        Artisan::call('config:clear');
-        Artisan::call('route:clear');
-        return view('article');
-    }
-
     public function getCallback(){
 
         return view('callback')->with('map', 'Главная , Обратная связь');
@@ -138,7 +131,7 @@ class IndexController extends Controller
             return redirect()->route('callback')->with('success', 'Спасибо за обращение, Ваше письмо принято, мы скоро вам ответим.');
         } else{
             $validator->errors()->add('Callback', 'Callback');
-            return redirect('callback')->withInput()->withErrors($validator->errors());
+            return redirect()->route('callback')->withInput()->withErrors($validator->errors());
         }
     }
 
